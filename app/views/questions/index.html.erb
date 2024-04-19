@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center">Questions</h1>
+
+<div id="questions" class="m-5 p-5" class="text-align: center;" style="background-color:lightgray; border-radius: 10px;">
+  <% @questions.each do |question| %>
+    <%= render question %>
+    <p>
+      <%= link_to "Show this question", question, class: "btn btn-primary btn-sm mx-1" %>
+      <%= link_to 'Edit', edit_question_path(:id, :question_id), class: "btn btn-dark btn-sm mx-1" %>
+      <%= button_to 'Destroy', @question, method: :delete, data: {turbo_confirm: "Are you sure you want to delete?" }, class: "btn btn-danger btn-sm mx-1" %>
+    </p>
+    <hr>
+    <br>
+
+  <% end %>
+</div>
+
+<%= link_to "New Question", new_question_path, class: "btn btn-success btn-lg" %>

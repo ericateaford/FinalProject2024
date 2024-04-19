@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="path/to/bootstrap.css">
+<link rel="stylesheet" href="path/to/bootstrap-icons.css">
+
+<h1 class="text-center">Questions</h1>
+  <div class="mt-2 text-center">
+    <%= link_to "<i class='bi bi-plus-square'></i> Create a new Question".html_safe, new_question_path, class: "btn btn-success btn-lg btn-block mb-2" %>
+  </div>
+
+<h3 class="mt-5 text-center">View your Created Questions </h3>
+  <div class="mt-3 text-center"> 
+  <%= link_to "<i class='bi bi-eye'></i> Created Questions".html_safe, viewquestion_path, class: "btn btn-dark btn-lg btn-block mb-2" %>
+</div>
+
