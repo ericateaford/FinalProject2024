@@ -55,6 +55,7 @@ class QuestionsController < ApplicationController
 
   # DELETE /questions/1 or /questions/1.json
   def destroy
+    @question = Question.find(params[:id]) 
     @question.options.each { |option| option.destroy }
     @question.survey_questions.each { |survey_question| survey_question.destroy }
     @question.destroy

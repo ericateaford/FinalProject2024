@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <%= form_with(model: question, html: { class: 'custom-form' }) do |form| %>
-        <% if question.errors.any? %>
+      <%= form_with(model: @question, html: { class: 'custom-form' }) do |form| %>
+        <% if @question.errors.any? %>
           <div style="color: red">
-            <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+            <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
 
             <ul>
-              <% question.errors.each do |error| %>
+              <% @question.errors.each do |error| %>
                 <li><%= error.full_message %></li>
               <% end %>
             </ul>
